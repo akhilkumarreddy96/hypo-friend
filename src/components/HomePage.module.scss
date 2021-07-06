@@ -1,0 +1,45 @@
+.home-container {
+    margin-top: 78px;
+}
+
+.btn  {
+    height: 70px;
+    border:2px solid #aed3d8;
+    background-color: transparent;
+    padding: 16px 32px;
+}
+.btn-text {
+    font-weight: 500;
+    font-size: 18px;
+    color: #0d324d;
+    width: 100%;
+    display: block;
+    cursor: pointer;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.second-btn {
+    @media (min-width:768px) {
+        margin-left: 1rem;
+
+    }
+    @media (max-width:768px) {
+        margin-top: 1rem;
+    }
+}
+.heading {
+    margin-bottom: 24px;
+    font-size: 32px;
+    font-weight: bold;
+    margin-top:20px;
+}
+.description {
+    margin: 0 auto;
+    font-size: 18px;
+    color: #0d324d;
+    letter-spacing: 0;
+    line-height: 26px;
+    -webkit-font-smoothing: antialiased;
+    margin-bottom: 40px;
+}

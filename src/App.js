@@ -1,24 +1,20 @@
 import logo from './logo.svg';
-import './App.css';
+import './App.module.scss';
+import HomePage from './components/HomePage';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
+import { Container } from 'react-bootstrap';
+import { useEffect, useState } from 'react';
 
-function App() {
+const  App=()=> {
+  const [selectedStep,setSelectedStep] = useState(1);
+ 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container className="App">
+      <Header setSelectedStep ={setSelectedStep} selectedStep={selectedStep} />
+      <HomePage setSelectedStep ={setSelectedStep} selectedStep={selectedStep}/>
+      <Footer />
+    </Container>
   );
 }
 
