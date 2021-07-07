@@ -171,72 +171,331 @@ const HomePage = (props) => {
       </div>
     );
   };
-  const handleSearch=()=>{
+  const handleSearch = () => {
     console.log("Search");
-  }
+  };
   const Step6 = () => {
     return (
       <div>
         <div className={styles["heading"]}>
-          {"Do you plan to live there or rent it out ?"}
+          {"Which city you are looking to buy in ?"}
         </div>
         <div>
           <label>
-            <span><button onClick={handleSearch}>{'Search'}</button></span>
-          <input type="text" value="enteredCity" placeholder="Enter your city here" />
-
+            <span>
+              <button onClick={handleSearch}>{"Search"}</button>
+            </span>
+            <input
+              type="text"
+              value="enteredCity"
+              placeholder="Enter your city here"
+            />
           </label>
-
         </div>
         <Row>
           <Col md={3} className={styles["btn"]} onClick={() => handleStep()}>
             {" "}
-            <span className={styles["btn-text"]}>{"Live there"}</span>
+            <span className={styles["btn-text"]}>{"Berlin"}</span>
           </Col>
           <Col md={3} className={styles["btn"]} onClick={() => handleStep()}>
             {" "}
-            <span className={styles["btn-text"]}>{"Rental"}</span>
-          </Col>
-
-          <Col md={3} className={styles["btn"]} onClick={() => handleStep()}>
-            {" "}
-            <span className={styles["btn-text"]}>{"Partial Rental"}</span>
-          </Col>
-          <Col md={3} className={styles["btn"]} onClick={() => handleStep()}>
-            {" "}
-            <span className={styles["btn-text"]}>{"Live there"}</span>
-          </Col>
-          <Col md={3} className={styles["btn"]} onClick={() => handleStep()}>
-            {" "}
-            <span className={styles["btn-text"]}>{"Rental"}</span>
+            <span className={styles["btn-text"]}>{"Munich"}</span>
           </Col>
 
           <Col md={3} className={styles["btn"]} onClick={() => handleStep()}>
             {" "}
-            <span className={styles["btn-text"]}>{"Partial Rental"}</span>
+            <span className={styles["btn-text"]}>{"Hamburg"}</span>
           </Col>
           <Col md={3} className={styles["btn"]} onClick={() => handleStep()}>
             {" "}
-            <span className={styles["btn-text"]}>{"Live there"}</span>
+            <span className={styles["btn-text"]}>{"Stuttgart"}</span>
           </Col>
           <Col md={3} className={styles["btn"]} onClick={() => handleStep()}>
             {" "}
-            <span className={styles["btn-text"]}>{"Rental"}</span>
+            <span className={styles["btn-text"]}>{"Frankfurt"}</span>
           </Col>
 
           <Col md={3} className={styles["btn"]} onClick={() => handleStep()}>
             {" "}
-            <span className={styles["btn-text"]}>{"Partial Rental"}</span>
+            <span className={styles["btn-text"]}>{"Essen"}</span>
+          </Col>
+          <Col md={3} className={styles["btn"]} onClick={() => handleStep()}>
+            {" "}
+            <span className={styles["btn-text"]}>{"Cologne"}</span>
+          </Col>
+          <Col md={3} className={styles["btn"]} onClick={() => handleStep()}>
+            {" "}
+            <span className={styles["btn-text"]}>{"Dussel"}</span>
+          </Col>
+
+          <Col md={3} className={styles["btn"]} onClick={() => handleStep()}>
+            {" "}
+            <span className={styles["btn-text"]}>{"Others"}</span>
           </Col>
         </Row>
       </div>
     );
   };
   const Step7 = () => {
-    return <div>In Step7</div>;
+    return (
+      <div>
+        <div className={styles["heading"]}>
+          {"What is the purchase value ?"}
+        </div>
+        <div className={styles["description"]}>
+          {
+            "If you're not sure, please tell us the approximate amount you plan on spending (only the price of the property)."
+          }
+        </div>
+        <div>
+          <span>
+            <input type="text" value="purchaseVal" />
+            <button onClick={handleStep} className={styles["btn-next"]}>
+              Next
+            </button>
+          </span>
+        </div>
+      </div>
+    );
   };
   const Step8 = () => {
-    return <div>In Step8</div>;
+    return (
+      <div>
+        <div className={styles["heading"]}>
+          {
+            "What is the maximum down payment you want to invest in the property ?"
+          }
+        </div>
+        <div className={styles["description"]}>
+          {
+            "If you're not sure, please tell us the approximate amount you plan on spending (only the price of the property)."
+          }
+        </div>
+        <div>
+          <span>
+            <input type="text" value="downPayment" />
+            <button onClick={handleStep} className={styles["btn-next"]}>
+              Next
+            </button>
+          </span>
+        </div>
+      </div>
+    );
+  };
+
+  const Step9 = () => {
+    return (
+      <div>
+        <div className={styles["heading"]}>
+          {"Do you know the real estate agent fee ?"}
+        </div>
+        <Row>
+          <Col md={5} className={styles["btn"]} onClick={() => handleStep()}>
+            {" "}
+            <span className={styles["btn-text"]}>{"2.5%"}</span>
+          </Col>
+          <Col md={5} className={styles["btn"]} onClick={() => handleStep()}>
+            {" "}
+            <span className={styles["btn-text"]}>{"7%"}</span>
+          </Col>
+
+          <Col md={5} className={styles["btn"]} onClick={() => handleStep()}>
+            {" "}
+            <span className={styles["btn-text"]}>{"Others"}</span>
+          </Col>
+        </Row>
+      </div>
+    );
+  };
+  const Step10 = () => {
+    return (
+      <div>
+        <div className={styles["heading"]}>
+          {"Are you applying alone or with someone else?"}
+        </div>
+        <Row>
+          <Col md={5} className={styles["btn"]} onClick={() => handleStep()}>
+            {" "}
+            <span className={styles["btn-text"]}>{"Alone"}</span>
+          </Col>
+          <Col md={5} className={styles["btn"]} onClick={() => handleStep()}>
+            {" "}
+            <span className={styles["btn-text"]}>{"With Someone else"}</span>
+          </Col>
+        </Row>
+      </div>
+    );
+  };
+  const Step11 = () => {
+    return (
+      <div>
+        <div className={styles["heading"]}>
+          {"What is your Employment status?"}
+        </div>
+        <Row>
+          <Col md={5} className={styles["btn"]} onClick={() => handleStep()}>
+            {" "}
+            <span className={styles["btn-text"]}>{"Employed"}</span>
+          </Col>
+          <Col md={5} className={styles["btn"]} onClick={() => handleStep()}>
+            {" "}
+            <span className={styles["btn-text"]}>{"Self Employed"}</span>
+          </Col>
+
+          <Col md={5} className={styles["btn"]} onClick={() => handleStep()}>
+            {" "}
+            <span className={styles["btn-text"]}>{"Free Lancer"}</span>
+          </Col>
+          <Col md={5} className={styles["btn"]} onClick={() => handleStep()}>
+            {" "}
+            <span className={styles["btn-text"]}>{"Student"}</span>
+          </Col>
+
+          <Col md={5} className={styles["btn"]} onClick={() => handleStep()}>
+            {" "}
+            <span className={styles["btn-text"]}>{"Wealthy Person"}</span>
+          </Col>
+          <Col md={5} className={styles["btn"]} onClick={() => handleStep()}>
+            {" "}
+            <span className={styles["btn-text"]}>{"Pentioner"}</span>
+          </Col>
+        </Row>
+      </div>
+    );
+  };
+  const Step12 = () => {
+    return (
+      <div>
+        <div className={styles["heading"]}>
+          {"What's your monthly net income in the household ?"}
+        </div>
+        <div className={styles["description"]}>
+          {
+            "Please state your household's income including salary,bonuses and any other incomes ."
+          }
+        </div>
+        <div>
+          <span>
+            <input type="text" value="monthlyIncome" />
+            <button onClick={handleStep} className={styles["btn-next"]}>
+              Next
+            </button>
+          </span>
+        </div>
+      </div>
+    );
+  };
+
+  const Step13 = () => {
+    return (
+      <Container>
+        <div>
+          <button onClick={goBack}>
+            <img src="" alt="back" />
+          </button>
+          <div>{" Get Personalised, English speaking Mortgage advice"}</div>
+        </div>
+
+        <Row>
+          <Col md={6} className={styles["first-half"]}>
+            <Row>
+              <Col md={4}>
+                <div>Salutation</div>
+
+                <select>
+                  <option>Mr</option>
+                  <option>Mrs</option>
+                  <option>Ms</option>
+                </select>
+              </Col>
+              <Col md={4}>
+                <div>{"First name"}</div>
+                <div>
+                  <label>
+                    <input type="text" value="firstName" />
+                  </label>
+                </div>
+              </Col>
+              <Col md={4}>
+                <div>{"First name"}</div>
+                <div>
+                  <label>
+                    <input type="text" value="firstName" />
+                  </label>
+                </div>
+              </Col>
+            </Row>
+            <Row>
+              <Col md={12}>
+                <div>Email</div>
+                <div>
+                  <input type="email" />
+                </div>
+              </Col>
+            </Row>
+            <Row>
+              <Col md={12}>
+                <div>Phone</div>
+                <div>
+                  <input type="email" />
+                </div>
+              </Col>
+            </Row>
+            <Row>
+              <Col md={12}>
+                <div className="d-flex">
+                  <span>
+                    <input type="checkbox" />
+                  </span>
+                  <span>
+                    {
+                      "Yes, my advisor may contact me by telephone ,optimal offer preparation and or is only possible only if your financial contributor can contact you"
+                    }
+                  </span>
+                </div>
+              </Col>
+            </Row>
+          </Col>
+          <Col md={6}>
+            <Row className={styles["inverse-row"]}>
+              <Col>
+                <Row>
+                  <Col md={3}>
+                    <img src="" alt="Icon" />
+                  </Col>
+                  <Col md={9}>
+                    <div>Your digital Wallet</div>
+                    <div>Your digital Wallet</div>
+                  </Col>
+                </Row>
+              </Col>
+              <Col>
+                <Row>
+                  <Col md={3}>
+                    <img src="" alt="Icon" />
+                  </Col>
+                  <Col md={9}>
+                    <div>Your digital Wallet</div>
+                    <div>Your digital Wallet</div>
+                  </Col>
+                </Row>
+              </Col>
+              <Col>
+                <Row>
+                  <Col md={3}>
+                    <img src="" alt="Icon" />
+                  </Col>
+                  <Col md={9}>
+                    <div>Your digital Wallet</div>
+                    <div>Your digital Wallet</div>
+                  </Col>
+                </Row>
+              </Col>
+            </Row>
+          </Col>
+        </Row>
+      </Container>
+    );
   };
   const getStep = () => {
     switch (props.selectedStep) {
@@ -257,10 +516,19 @@ const HomePage = (props) => {
         return Step7();
       case 8:
         return Step8();
+      case 9:
+        return Step9();
+      case 10:
+        return Step10();
+      case 11:
+        return Step11();
+      case 12:
+        return Step12();
+      case 13:
+        return Step13();
 
       default:
         return Step1();
-        break;
     }
   };
   const goBack = () => {

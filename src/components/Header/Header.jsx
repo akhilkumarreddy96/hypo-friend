@@ -9,7 +9,7 @@ const Header = (props) => {
           <img src={"assets/Logo.svg"} />
         </Col>
         <Col md={6} className={styles["center-comp"]}>
-          <ProgressBar now={props.selectedStep} max= {10}/>
+          <ProgressBar now={props.selectedStep} max= {13}/>
         </Col>
         <Col md={3} className={styles["last-col-cont"]}>
           <span className={styles["header-last-col"]}>

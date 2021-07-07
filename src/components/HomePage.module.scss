@@ -20,7 +20,14 @@
     border-radius: 4px;
     text-align: center;
 }
-
+.btn-next {
+    padding:1.5rem;
+    background-color: #0d324d;
+    color:#aed3d8;
+}
+input {
+    height: 70px;
+}
 // .second-btn {
 //     @media (min-width:768px) {
 //         margin-left: 1rem;
@@ -53,4 +60,10 @@
     position: absolute;
     left: 13%;
     top: 5rem;
+}
+.first-half {
+    border-right: 2px solid;
+}
+.inverse-row {
+    flex-direction: column;
 }
