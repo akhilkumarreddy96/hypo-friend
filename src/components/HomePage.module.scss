@@ -63,7 +63,65 @@ input {
 }
 .first-half {
     border-right: 2px solid;
+    padding:2rem;
+    padding-right: 4rem;
 }
 .inverse-row {
     flex-direction: column;
+}
+
+.search-btn {
+    height: 70px;
+    border:none;
+    color:#0d324d;
+    font-weight: bold;
+    background-color:cadetblue;
+}
+
+.search-input {
+    width: 54%;
+    @media (max-width:36rem){
+        width:90%;
+    }
+}
+
+.search-label {
+    margin-left:160px;
+    @media(max-width:36rem) {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+input[type="checkbox"] {
+    width: 70px;
+    margin-right: 1.5rem;
+}
+.full-input {
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.free-text {
+    margin-left: 1.5rem;
+}
+
+.last-name {
+    margin-left: 4rem;
+}
+
+select {
+    height: 70px;
+}
+
+.free-icons {
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+}
+
+.box-container {
+    padding:1.5rem;
+    border:1px solid #0d324d;
+    margin-top: 1rem;
 }

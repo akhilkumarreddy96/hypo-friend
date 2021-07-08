@@ -180,15 +180,15 @@ const HomePage = (props) => {
         <div className={styles["heading"]}>
           {"Which city you are looking to buy in ?"}
         </div>
-        <div>
-          <label>
+        <div className={styles["search-container"]}>
+          <label className={`${styles["search-label"]} d-flex`}>
             <span>
-              <button onClick={handleSearch}>{"Search"}</button>
+              <button onClick={handleSearch} className={styles["search-btn"]}>{"Search"}</button>
             </span>
             <input
               type="text"
-              value="enteredCity"
               placeholder="Enter your city here"
+              className={styles["search-input"]}
             />
           </label>
         </div>
@@ -389,17 +389,17 @@ const HomePage = (props) => {
   const Step13 = () => {
     return (
       <Container>
-        <div>
+        <div className="d-flex">
           <button onClick={goBack}>
             <img src="" alt="back" />
           </button>
-          <div>{" Get Personalised, English speaking Mortgage advice"}</div>
+          <div className={styles["free-text"]}>{" Get Personalised, English speaking Mortgage advice"}</div>
         </div>
 
-        <Row>
+        <Row className={styles["box-container"]}>
           <Col md={6} className={styles["first-half"]}>
             <Row>
-              <Col md={4}>
+              <Col md={2}>
                 <div>Salutation</div>
 
                 <select>
@@ -412,15 +412,15 @@ const HomePage = (props) => {
                 <div>{"First name"}</div>
                 <div>
                   <label>
-                    <input type="text" value="firstName" />
+                    <input type="text"  />
                   </label>
                 </div>
               </Col>
-              <Col md={4}>
-                <div>{"First name"}</div>
+              <Col md={4} className={styles["last-name"]}>
+                <div>{"Lastname"}</div>
                 <div>
                   <label>
-                    <input type="text" value="firstName" />
+                    <input type="text"  />
                   </label>
                 </div>
               </Col>
@@ -429,7 +429,7 @@ const HomePage = (props) => {
               <Col md={12}>
                 <div>Email</div>
                 <div>
-                  <input type="email" />
+                  <input type="email" className={styles["full-input"]} />
                 </div>
               </Col>
             </Row>
@@ -437,13 +437,13 @@ const HomePage = (props) => {
               <Col md={12}>
                 <div>Phone</div>
                 <div>
-                  <input type="email" />
+                  <input type="tel"  className={styles["full-input"]}/>
                 </div>
               </Col>
             </Row>
             <Row>
               <Col md={12}>
-                <div className="d-flex">
+                <label className="d-flex">
                   <span>
                     <input type="checkbox" />
                   </span>
@@ -452,40 +452,40 @@ const HomePage = (props) => {
                       "Yes, my advisor may contact me by telephone ,optimal offer preparation and or is only possible only if your financial contributor can contact you"
                     }
                   </span>
-                </div>
+                </label>
               </Col>
             </Row>
           </Col>
           <Col md={6}>
             <Row className={styles["inverse-row"]}>
               <Col>
-                <Row>
+                <Row className={styles["free-icons"]}>
                   <Col md={3}>
                     <img src="" alt="Icon" />
                   </Col>
-                  <Col md={9}>
+                  <Col md={9} >
                     <div>Your digital Wallet</div>
                     <div>Your digital Wallet</div>
                   </Col>
                 </Row>
               </Col>
               <Col>
-                <Row>
+                <Row className={styles["free-icons"]}>
                   <Col md={3}>
                     <img src="" alt="Icon" />
                   </Col>
-                  <Col md={9}>
+                  <Col md={9}  >
                     <div>Your digital Wallet</div>
                     <div>Your digital Wallet</div>
                   </Col>
                 </Row>
               </Col>
               <Col>
-                <Row>
+                <Row className={styles["free-icons"]}>
                   <Col md={3}>
                     <img src="" alt="Icon" />
                   </Col>
-                  <Col md={9}>
+                  <Col md={9}  >
                     <div>Your digital Wallet</div>
                     <div>Your digital Wallet</div>
                   </Col>
